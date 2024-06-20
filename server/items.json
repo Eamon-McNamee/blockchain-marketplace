@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "name": "Playstation",
+      "price": 600
+    },
+    {
+      "name": "Nintendo",
+      "price": 400
+    }
+  ]
+}
