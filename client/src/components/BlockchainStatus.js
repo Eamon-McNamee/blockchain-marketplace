@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Web3 from 'web3';
+import '../assets/css/styles.css';
 
 const BlockchainStatus = () => {
   const [networkStatus, setNetworkStatus] = useState('Disconnected');
@@ -51,6 +52,8 @@ const BlockchainStatus = () => {
       <p>Network: {TESTNET}</p>
       <p>
         Network Status: {networkStatus}
+        {networkStatus === 'Connected' && <span className="dot connected"></span>}
+        {networkStatus === 'Disconnected' && <span className="dot disconnected"></span>}
       </p>
       <p>Latest Block Number: {latestBlock || 'Loading...'  }</p>
     </div>
