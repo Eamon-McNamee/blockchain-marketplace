@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { fetchItems } from './services/apiService';
+import { fetchItems, addItem } from './services/apiService';
+import ItemsList from './components/ItemsList';
+import AddItemForm from './components/AddItemForm';
 
 function App() {
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -11,19 +12,18 @@ function App() {
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
+  const handleAddItem = (newItem) => {
+    addItem(newItem)
+      .then(response => {
+        setItems([...items, newItem]);
+      })
+      .catch(error => console.error('Error adding item:', error));
+  };
+
   return (
-    <div className="App">
-      <h1>Blockchain Marketplace</h1>
-      <div>
-        <h1>Items</h1>
-        <ul className="item-list">
-          {items.map((item, index) => (
-            <li key={index}>
-              <strong>{item.name}</strong>: ${item.price.toFixed(2)}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div>
+      <ItemsList items={items} />
+      <AddItemForm onAddItem={handleAddItem} />
     </div>
   );
 }
