@@ -7,6 +7,7 @@ A simple React.js and Node.js application with blockchain integration.
 ## Table of Contents
 - [Blockchain Marketplace](#blockchain-marketplace)
   - [Table of Contents](#table-of-contents)
+  - [Dependencies](#dependencies)
   - [Setup Instructions](#setup-instructions)
     - [Backend](#backend)
     - [Frontend](#frontend)
@@ -25,6 +26,15 @@ A simple React.js and Node.js application with blockchain integration.
     - [`AddItemForm.js`](#additemformjs)
     - [`BlockchainStatus.js`](#blockchainstatusjs)
   - [License](#license)
+
+## Dependencies
+
+Before setting up and running the application, ensure you have the following dependencies installed:
+
+- **Node.js**: Download and install from [Node.js](https://nodejs.org/).
+- **npm**: Comes bundled with Node.js.
+- **Docker**: Download and install from [Docker](https://www.docker.com/).
+- **Docker Compose**: Comes bundled with Docker Desktop.
 
 ## Setup Instructions
 
