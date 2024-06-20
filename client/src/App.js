@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchItems, addItem } from './services/apiService';
 import ItemsList from './components/ItemsList';
 import AddItemForm from './components/AddItemForm';
+import BlockchainStatus from './components/BlockchainStatus';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -24,6 +25,7 @@ function App() {
     <div>
       <ItemsList items={items} />
       <AddItemForm onAddItem={handleAddItem} />
+      <BlockchainStatus />
     </div>
   );
 }
